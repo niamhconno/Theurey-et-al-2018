@@ -18,7 +18,3 @@ Run PlotPopulationwLitValues.m
 To explicitly reproduce Figs 1C and 2F
 Run plotExptBoxplot.m (individual sections for each figure)
 (Note: 2018-June-01 - data needs to be added to this code for it to be standalone)
-
-Old: 25th January 2018: Paper submitted to Journal of Neuroscience.
-Old: Uploaded files are sufficient to run singleRun_checkPopulation.m which will simulate 10 cells and output steady-state values and 
-Old: timeseries compared to experimental data. These simulations were used to generate Figure 1. 
