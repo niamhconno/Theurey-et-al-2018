@@ -18,10 +18,9 @@ function [rotenone,AA,oligo,CIV,FCCP,energy] = ...
 switch expt
     % Rotenone (Rot, Oligo)
     case 1  
-        % FCCP gives integration errors when certain combinations of drugs  
-        % are applied prior to FCCP
         rotenone.t = 10; 
         oligo.t = 40;
+        FCCP.t = 70;
     
     % Antimycin A (AA, Oligo)
     case 2  
@@ -34,18 +33,22 @@ switch expt
         AA.t = 54; 
         oligo.t = 18; 
         FCCP.t = 36;
-        rotenone.percent = 0;
-        AA.percent = 0;
+        % Set to ~0 to align with expts where measurements after Rot/AA 
+        % drugs are considered non-mitochondrial respiration 
+        % Setting = 0 returns NaN and Inf values
+        rotenone.percent = 1e-20;   
+        AA.percent = 1e-20;
     
     % Seahorse with increased energy demand (IncEnDem, Oligo, FCCP, Rot+AA)
+    % Not used in Theurey et al 2018
     case 4 
         rotenone.t = 54; 
         AA.t = 54; 
         oligo.t = 15;   
         FCCP.t = 40; 
         energy.t = 3;   
-        rotenone.percent = 0; % = 0 so it is purely cytosolic processes
-        AA.percent = 0; 
+        rotenone.percent = 1e-20;   
+        AA.percent = 1e-20; 
     
     % FCCP, Rotenone
     case 5 
@@ -53,7 +56,6 @@ switch expt
         FCCP.t = 10;   
         AA.t = t_no_time; 
         oligo.t = t_no_time; 
-        %rotenone.percent = 0; %0.0000001; = 0 to get maximum NADH levels
 end
 
 if printRequest == 1

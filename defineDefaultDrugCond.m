@@ -5,7 +5,6 @@ function [rotenone, AA, oligo, CIV, FCCP, energy] = defineDefaultDrugCond(t_no_t
 %
 % Define time and extent of drug addition
 %%% Oligomyin (oligo): ATP synthase inhibition
-%%%             Sets J_F1 = 0 (previously)
 %%% Rotenone: Complex I inhibition
 %%% Antimycin A (AA): Complex III inhibition
 %%% CIV: Complex IV inhibition
@@ -23,14 +22,16 @@ function [rotenone, AA, oligo, CIV, FCCP, energy] = defineDefaultDrugCond(t_no_t
 
 % Extent of inhibition (standard values) 
 % Determined from drug response curves from literature, 
-% Recorded in "ICs and Ks from lit.xls" and "Quantifying drug
-% simulations_older.xls"
-    oligo.percent       = 0.00005/100;
-    rotenone.percent    = 0.01/100;       
-    AA.percent          = 0.2/100;       
+% Recorded in "ICs and Ks from lit.xls" 
+
+    oligo.percent       = 0.0004/100; 
+    rotenone.percent    = 0.14/100;       
+    AA.percent          = 0.8/100;       
     CIV.percent         = 100/100;
     % Increase proton leak to max. Any higher values gives ~ same result
-    FCCP.factor         = 15;    
-    energy.factor       = 5;
+    % for JC_4 (i.e. simulating max respiration)
+    % (see "ICs and Ks from lit.xls")
+    FCCP.factor         = 13;    
+    energy.factor       = 1; % If using this, need to re-calibrate
     
 end
