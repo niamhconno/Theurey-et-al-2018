@@ -5,17 +5,15 @@ function plotExptBoxplot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 % Plot Fig 1C for Theurey et al Aging Cell
+% Paste relevant data from "Pre-generated simulation data.xls" into x variable
 % x = data (col 1), group (col 2) and scatter (col 3)
-% TMRM data (both expts and sims) from Boxplots tab in Rot_TMRM_Dibac_combined.xls 
-% from 'Susette's data' in CeBioND folder (or Oligo_...xls, or Anti_...xls)
-% NADH expt data from Padova - 'Autofluo-Padova Niamh.xls' (Boxplot tab)
 % Simulations generated using Beard_NC_simulatePopulation.m
 
 % Specify data variable
-data = 'TMRM_Oligo';
+%data = 'TMRM_Oligo';
 %data = 'TMRM_AA';
 %data = 'TMRM_Rot';
-%data = 'NADH_Rot';   
+data = 'NADH_Rot';   
 
 % Position = figure dimensions for publication
 figure('Position', [100 100 120 130])
