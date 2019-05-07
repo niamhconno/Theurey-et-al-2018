@@ -5,11 +5,11 @@ If you make use of this code please cite:
 
 Pierre Theurey, Niamh M. C. Connolly, Ilaria Fortunati, Emy Basso, Susette Lauwen, Camilla Ferrante, Catarina Moreira Pinho, Alvin Joselin, Anna Gioran, Daniele Bano, David S. Park, Maria Ankarcrona, Paola Pizzo, Jochen H. M. Prehn (2019). Systems biology identifies preserved integrity but impaired metabolism of mitochondria due to a glycolytic defect in Alzheimer’s disease neurons. Aging Cell. 2019; e12924. https://doi.org/10.1111/acel.12924
 
---------
 Code created in MATLAB R2017a. 
 
 If there are any issues with this code please contact niamhmconnolly@rcsi.ie
 
+--------
 
 -To generate data for all Figures listed above
 
