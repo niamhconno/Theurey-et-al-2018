@@ -17,11 +17,11 @@ If there are any issues with this code please contact niamhmconnolly@rcsi.ie
 
 ---User input required
 
----% Line 72: Set number of simulations (currently set to 10)
+---% Line 69: Set number of simulations (currently set to 10)
 
----% Line 86: Set what experiment to simulate (currently set to 3 = standard Seahorse OCR)
+---% Line 82: Set what experiment to simulate (currently set to 3 = standard Seahorse OCR)
 
----% Line 96: Set what putative transgenic defects to simulate (all currently set to 1 = wildtype)
+---% Line 92: Set what putative transgenic defects to simulate (all currently set to 1 = wildtype)
 
 --Additionally, a break-point should be set at end of code to extract data
 
